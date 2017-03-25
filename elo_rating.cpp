@@ -21,13 +21,14 @@ double Data::eb()
 { 
         return(1/(1+pow(10,(ra-rb)/400))); 
 } 
-double Data::new_ra(double sa) 
+double Data::new_ra(double sa,double ea) 
 { 
-        ra = ra+k*(sa-ea()); 
+        ra = ra+k*(sa-ea); 
         return ra; 
 } 
-double Data::new_rb(double sb) 
+double Data::new_rb(double sb,double eb) 
 { 
-        rb = rb+k*(sb-eb()); 
+        rb = rb+k*(sb-eb); 
         return rb; 
 } 
+
