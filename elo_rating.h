@@ -9,8 +9,8 @@ public:
         Data();
         double ea();
         double eb();
-        double new_ra(double sa);
-        double new_rb(double sb);
+        double new_ra(double sa,double ea);
+        double new_rb(double sb,double eb);
 private:
         double k;
         double ra;
