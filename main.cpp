@@ -13,7 +13,7 @@ int main()
                	cerr<<"Failed reading"<<endl; 
         	exit(1); 
       	} 
-        double k,ra,rb,sa; 
+        double k,ra,rb,sa,ea,eb; 
 	inFile>>k>>ra>>rb; 
 	ofstream outFile("outfile",ios::out); 
 	if(!outFile) 
@@ -24,7 +24,9 @@ int main()
 	outFile<<ra<<" "<<rb<<endl; 
 	while(inFile>>sa) 
         { 
-                outFile<<round(start.new_ra(sa))<<" "<<round(start.new_rb(1-sa))<<endl; 
+		ea = start.ea();
+		eb = start.eb();
+                outFile<<round(start.new_ra(sa,ea))<<" "<<round(start.new_rb(1-sa,eb))<<endl; 
         } 
 }
 
