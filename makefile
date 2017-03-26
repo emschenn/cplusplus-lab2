@@ -7,3 +7,6 @@ elo_rating.o: elo_rating.cpp elo_rating.h
 main.o: main.cpp elo_rating.h
 	g++ -c main.cpp 
 
+clean:
+	rm main *.o
+
