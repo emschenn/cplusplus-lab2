@@ -23,12 +23,12 @@ double Data::eb()
 } 
 double Data::new_ra(double sa,double ea) 
 { 
-        ra = ra+k*(sa-ea); 
+        ra = round(ra+k*(sa-ea)); 
         return ra; 
 } 
 double Data::new_rb(double sb,double eb) 
 { 
-        rb = rb+k*(sb-eb); 
+        rb = round(rb+k*(sb-eb)); 
         return rb; 
 } 
 
